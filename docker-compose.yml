@@ -15,8 +15,8 @@ services:
           - slotopolhost
     environment:
       SLOTOPOL_DBDRIVER: postgres
-      SLOTOPOL_CLUBDSN: postgres://admin:g7Hh23aVb@pghost:5432/slotopol?sslmode=disable
-      SLOTOPOL_SPINDSN: postgres://admin:g7Hh23aVb@pghost:5432/slotopol?sslmode=disable
+      SLOTOPOL_CLUBDSN: postgres://admin:g7Hh23aVb@34.87.54.33:5432/slotopol?sslmode=disable
+      SLOTOPOL_SPINDSN: postgres://admin:g7Hh23aVb@34.87.54.33:5432/slotopol?sslmode=disable
     restart: unless-stopped
     stop_signal: SIGINT
     stop_grace_period: 15s
@@ -29,7 +29,7 @@ services:
     networks:
       slotopol-net:
         aliases:
-          - pghost
+          - 34.87.54.33
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: g7Hh23aVb
